@@ -1,0 +1,10 @@
+
+    	<div class="container ja">
+        	<div class="small-12 medium-6 large-6 column">
+            	<img id="fotkamarty" src="img/ja.JPG" />
+                <p>Znak rozpoznawczy: długie włosy.</p><br />
+				<p>Posiada szufladę.</p><br />
+				<p>Jedyna w swoim rodzaju postać. ;-)</p><br />
+				<p>Resztę oceńcie sami.</p>
+            </div>
+        </div>

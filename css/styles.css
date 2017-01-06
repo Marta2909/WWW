@@ -1,0 +1,331 @@
+body {
+  margin: 0em 5em 0em 5em;
+  padding-left: 0em;
+  padding-right: 0em;
+  min-height: 100%;
+  font-family:Arial, Helvetica, sans-serif;
+  position:relative;
+  }
+  
+/*---------------------------------------------------
+NAGŁÓWEK
+-----------------------------------------------------*/
+
+	.top-bar {
+		background:#FFF;
+		height: 9em;
+		border-bottom: 0.005em solid #999;
+		position: fixed;
+		width: 89%;
+		z-index:1;
+		margin-top: -1em;
+		padding-top: 2em;
+		margin-right: 5em;
+	}
+	
+	.top-bar img {
+		height: 100px;
+		width: 250px;
+		margin-bottom: 0.1em;
+	}
+	
+	#leftMenu {
+		background:#FFF;
+		color:#000;
+		text-decoration:none;
+		list-style:none;
+	}
+	
+	#rightMenu {
+		background:#FFF;
+		height: 5.6em;
+		float: right;
+		position:relative;
+		padding: 0.2em;
+		/*padding-right:10em;*/q
+	}
+	
+	#rightMenu li {
+		background:#FFF;
+		height: 5.6em;
+		padding-top: 1.8em;
+		float: left;
+	}
+	
+	#rightMenu li a {
+		color:#000;
+	}
+	
+	#rightMenu li a:hover {
+		color:#399;
+	}
+	
+	#menuToggle{
+		z-index:1;
+		position:absolute;
+		background:#FFF;	
+		width: 6em;
+		border-top: 0.005em solid #999;
+		border-bottom: 0.005em solid #999;
+	}
+
+	#menuToggle li {
+		padding: 0em;
+		height: 2.5em;
+		width: 6em;
+		margin: 0em;
+	}
+	
+	.tytul {
+		color:#000;
+		display: inline;
+		float: left;
+	}
+	
+	#rightMenuSmall {
+		display:none;
+	}
+	
+	#smallMenuToggle{
+		display:none;
+	}
+
+	.smallToggleAblee {
+		display:none;
+	}
+	
+	#rightMenuSmalle {
+		display:none;
+	}
+
+
+/*----------------------------------------STOPKA------------------------------------------------
+-----------------------------------------------------------------------------------------------*/
+
+	footer {
+		background:#FFF;
+		height: 5em; 
+		border-top: 0.005em solid #999;
+		bottom: 0em;
+		width: 89%;
+		padding-right: 13em;
+		position: fixed;
+		/*z-index:1;*/
+		clear:both;
+	}
+	
+	#leftFooter p {
+		text-align: left;
+		float:left;
+		margin-left: 4em;
+		padding: 0em;
+		display:block;
+		height: 3em;
+		width: 20em;
+		margin-top: 1em;
+	}
+	
+	
+	#rightFooter {
+		float: right;
+		display: inline;
+		padding: 0em;
+		display:block;
+		margin-right: -11em;
+		margin-top:1em;
+	}
+	
+	#rightFooter .socialIcons li {
+		float: right;
+		display: inline;
+	}
+	#rightFooter .socialIcons li a {
+		color:#000;
+	}
+	
+	.socialIcons img {
+		height: 30px;
+		width: 30px;
+		margin-left: 1em;
+		padding-right: 0px;
+	}
+	
+/*----------------------------------------CZĘŚĆ GŁÓWNA------------------------------------------------
+------------------------------------------------------------------------------------------------------*/
+
+#contentSection {
+	height:90%;
+	width: 100%;
+	position:relative;
+	clear:both;
+	display:block;	
+}
+
+.container {
+	padding-top: 8em;
+	min-height: 45em;
+	position: relative;
+}
+
+.thumb {
+	width: 18em;
+	height: 12em;	
+	float: left;
+	display:inline;
+	overflow:hidden;
+	background:#FFF;
+	box-shadow:none;
+	position: relative;
+	padding-left:1em;
+	border: 0.005em solid #999;
+	margin-left:1.5em;
+	margin-top: 1.5em;
+}
+
+.thumb .headerinfo {
+	text-align:center;
+	color:#000;
+	border:none;
+}
+
+.thumb .postnote  {
+	width: 85%;
+	margin: 0 auto;
+	position:absolute;
+	color:#000;
+	border: none;
+}
+
+.thumb img,p  {
+	width: 100%;
+	height: 10em;	
+	display:inline;
+	overflow:hidden;
+	position:absolute;
+	margin: 0 auto;
+	padding-top: 0.5em;
+	padding-left: 0.5em;
+}
+
+
+.thumb h2 {
+	font-size:18px;
+}
+
+.thumb h3 {
+	font-size:16px;
+	color:#999;
+	line-height: 16px;
+}
+
+.note {
+	text-align:justify;
+}
+
+#fotkamarty{
+	float:right;
+	width: 29em;
+	height: 22em;
+	margin-top:3.5em;
+	border: 0.005em solid #999;
+	padding: 1em;
+
+	margin-right: 5em;
+	transform:rotate(-7deg);
+	clear:both;
+	padding=let:30em;
+}
+
+.ja {
+	width: 100%;
+}
+
+.ja .tytul {
+	width: 25%;
+	color:#000;
+	position: fixed;
+	border: none;
+	padding-left:1em;
+	padding-top:0.2em;
+}
+
+.ja p {
+	margin-top: 10em;
+	/*margin-left: -10em;*/
+	padding-left: 10em;
+	text-align:left;
+}
+
+.szuflada {
+	max-height: 100%;
+	color:#000;
+	border:none;
+}
+
+.szuflada:hover {
+	max-height: 100%;
+	color:#000;
+	border:none;
+}
+
+.szuflada .tytul {
+	width: 25%;
+	color:#000;
+	position: fixed;
+	border: none;
+	padding-left:1em;
+	padding-top:0.2em;
+}
+
+.szuflada .tytul h2{
+	float: left;
+	border: none;
+		color:#000;
+}
+
+.szuflada .tytul h2:hover{
+	color:#000;
+	border:none;
+}
+
+.szuflada .notka {
+	padding-bottom: 5em;
+	border:none;
+	color:#000;
+}
+
+.szuflada .notka p {
+	float: right;
+	height: auto;
+	text-align:justify;
+	padding-right:2em;
+	padding-top:1em;
+	overflow:hidden;
+	position: absolute;
+	padding-left: 24em;
+	margin-bottom: 5em;
+	padding-bottom:5em;
+	border: none;
+		color:#000;
+}
+
+
+.fancybox-title-over-wrap {
+    width: 100%;
+    padding: 0;
+}
+
+.fancybox-title-over-wrap > div {
+    padding: 10px;
+}
+
+#grid .mix{
+	display: none;
+}
+
+.morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+}

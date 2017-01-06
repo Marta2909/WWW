@@ -1,0 +1,162 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="pl"><![endif]-->
+<html class="no-js" lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width">
+	<title>Szuflada Marty</title>
+
+	<link rel="stylesheet" href="foundation/foundation-6/css/foundation.css"> <!--foundation css-->
+	<link rel="stylesheet" href="foundation/foundation-6/css/foundation-flex.css"> <!-- mormalize foundation-->
+
+	<!-- Zapytanie o media 2 big devices-->
+	<link href="css/styles.css" rel="stylesheet" type="text/css" media="only screen and (min-width:950px)">
+	<!-- Zapytanie o media 3 small devices-->
+	<link href="css/stylesSmall.css" rel="stylesheet" type="text/css" media="only screen and (max-width:950px)">
+	<!--osobisty arkusz styków -->
+
+	<script src="foundation/foundation-6/js/vendor/jquery.min.js"></script> 
+    <script src="foundation/foundation-6/js/vendor/what-input.min.js"></script>
+    
+    <script src="fancybox/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <link rel="stylesheet" href="fancybox/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+    <script src="fancybox/fancybox/source/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" href="fancybox/fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/fancybox/source/helpers/jquery.fancybox-buttons.js"></script>
+    <link rel="stylesheet" href="fancybox/fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+    <script tyle="text/javascript" src="fancybox/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    <script type="text/javascript" src="fancybox/fancybox/source/helpers/jquery.fancybox-media.js"></script>
+    
+	<script src="foundation/foundation-6/js/foundation.min.js"></script>
+    <script>
+    	$(document).foundation();
+  	</script>
+	<script>
+		$(document).ready(function() {
+			$(".fancybox").attr('rel', 'gallery').fancybox({
+        		padding : 0,
+    		});
+			$('#theNewOne').css('height','width');
+			$('.thumbnail').css('height','width');
+			$('.tag').hide();
+
+			//MENU DLA DUŻYCH EKRANÓW
+			$('.menu .vertical').hide();
+			$('.toggleAble').hover(function(){
+					$(this).find('#menuToggle').fadeToggle();
+			}); //koniec hover
+			
+			//MENU DLA MAŁYCH EKRANÓW		
+			$('.smallToggleAblee').click(function(){
+						$('#rightMenuSmalle').css('top','0em').animate({right: "0em"},600);
+						$('.nest').hide();
+			}); //koniec click
+			$('#rightMenuSmalle .zamknij').click(function(){
+						$('#rightMenuSmalle').css('top','0em').animate({right: "-200em"},600);
+						$('.smallToggleAblee').show();
+			}); //koniec click
+			$('.hasNest').click(function(){
+				$(this).find($('.nest')).toggle();
+			}); //koniec click
+			
+			
+        }); // koniec ready
+	</script>
+</head>
+
+<body>
+
+<!-- ....................................................................NAWIGACJA.................................................................-->
+<!-- ....................................................................NAWIGACJA.................................................................-->
+
+<!-- Nawigacja górna belka  -->
+	<nav class="top-bar">
+ 		<!-- lewa strona menu  -->
+		<div class="top-bar-left small-10 medium-4 large-4 column"><!---->
+      		<ul id="leftMenu">	
+            	<li class="filter" data-filter="all"><a href="#"><img src="img/tytul.png"/></a></li>
+    		</ul>
+		</div>
+                 
+        <!-- prawa strona menu  -->    
+ 		<div class="top-bar-right small-2 medium-8 large-8 column">      <!---->
+            	<!-- menu dla małych ekranów - z rozwijanej ikony  -->
+            <img class="smallToggleAblee" src="img/1455252410_menu.png" />
+            <ul id="rightMenuSmalle">
+                <li class="zamknij"><img src="img/1455252410_menu.png" /></li>
+                <li><a href="omarcie.html">O Marcie</a></li>
+                <li><a href="oszufladzie.html">O Szufladzie</a></li>
+                <li class="hasNest"><a href="robotki.html">Robótki</a>
+                    <ul>
+                        <li class="nest filter" data-filter=".rtekst"><a href="#">Tekst</a></li>
+                        <li class="nest filter" data-filter=".rrysunek"><a href="#">Rysunek</a></li>
+                        <li class="nest filter" data-filter=".rinne"><a href="#">Inne</a></li>
+                    </ul>    
+                </li>
+                <li class="hasNest"><a href="nierobotki.html">Nierobótki</a>
+                    <ul>
+                        <li class="nest filter" data-filter=".rfoto"><a href="#">Foto</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>         
+                
+            <!-- menu z tekstem dla dużych ekranów-->
+            <ul class="dropdown menu" id="rightMenu" data-dropdown-menu>
+                <li><a href="omarcie.html">O Marcie</a></li>
+                <li><a href="oszufladzie.html">O Szufladzie</a></li>
+                <li class="toggleAble"><a href="robotki.html">Robótki</a>
+                    <ul class="menu vertical" id="menuToggle"> 
+                        <li class="filter" data-filter=".rtekst"><a href="#">Tekst</a></li>
+                        <li class="filter" data-filter=".rrysunek"><a href="#">Rysunek</a></li>
+                        <li class="filter" data-filter=".rinne"><a href="#">Inne</a></li>
+                    </ul>
+                </li>
+                <li class="toggleAble"><a href="nierobotki.html">Nierobótki</a>
+                    <ul class="menu vertical" id="menuToggle"> 
+                        <li class="filter" data-filter=".rfoto">Foto</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+                     
+        </div>
+     </nav>
+        
+<!-- ....................................................................GŁÓWNA CZĘŚĆ.................................................................-->
+<!-- ....................................................................GŁÓWNA CZĘŚĆ.................................................................-->
+    
+    <section id="contentSection">
+    	<div class="container szuflada">
+        	<div class="small-12 medium-12 large-12 column oszufladzie">
+            	<div class="tytul">
+                	<h2>Hej :-)</h2>
+                </div>
+                <div class="notka">
+                	<p>Przyjacielu,<br /><br />jeśli czytasz ten wpis, to z dużym prawdopodobieństwem mogę przyjąć, że chciałeś(aś) dowiedzieć się, co to za miejsce… wiedz, że jest mi bardzo miło.<br />Z ogromną przyjemnością pragnę powitać Cię w Szufladzie Marty – tak, jesteś teraz w zakątku martowego biurka.<br />Biurkowa szuflada to wyjątkowy zakątek mebla. Mieszkają w niej bowiem często najróżniejsze przedmioty – od malutkich klamocików począwszy, a skończywszy na perełkach o największej dla właściciela szuflady wartości.<br />Moja szuflada przez wiele lat nagromadziła trochę takich Rupieci i nie ma w niej porządku. Za artystyczny nieład, bo nieporządkiem ciężko mi to nazwać, nie będę Cię jednak, Przyjacielu, przepraszać i wierzę, że mi to wybaczysz. Nie jest tych Rupieci nazbyt wiele i nie przybywały one jakoś specjalnie regularnie, a zależnie od przypływów moich chęci i tzw. weny twórczej. Odłożone do szuflady i trzymane w zamknięciu nie mogą być one jednak widziane przez nikogo innego poza mną. Otwieram więc przed Tobą swoją biurkową szufladę, chcąc pokazać Ci to, co od czasu do czasu hobbistycznie porabiam.<br />Rozgość się proszę wygodnie.<br /><br />Pozdrawiam,<br />Marta</p>
+            	</div>
+        	</div> 
+        </div>
+    </section>
+    
+    
+    
+<!-- ....................................................................STOPKA.......................................................................-->
+<!-- ....................................................................STOPKA.......................................................................-->
+    <!-- STOPKA -->        
+	<footer>
+         	<div id="leftFooter">
+            	<p class="copywrite">© 2016 Szuflada Marty</p>    
+            </div>
+            <div id="rightFooter">   
+            	<ul class="socialIcons">      				
+                	<li><a href="#"><img src="img/1455429079_mail.png"/></a></li>
+     				<li><a href="#"><img src="img/1455429074_facebook.png"/></a></li>
+    			</ul>
+			</div>
+	</footer>
+
+<script src="js/foundation/foundation.topbar.js"></script>
+</body>
+</html>
